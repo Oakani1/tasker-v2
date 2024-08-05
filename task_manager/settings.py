@@ -25,8 +25,13 @@ SECRET_KEY = 'django-insecure-b1ev$8r-#_h$^l7--b&!!d9tlz+kc1$ih5caz*bo*3+@z_2(dx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.codeinstitute-ide.net','.herokuapp.com']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeanyapp.com",
+    "https://*.herokuapp.com",
+    "https://*.codeinstitute-ide.net"
+]
 
 # Application definition
 
@@ -37,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
 ]
 
 MIDDLEWARE = [
