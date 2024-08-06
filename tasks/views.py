@@ -11,3 +11,6 @@ def show_task(request, task_id):
     }
 
     return render(request, 'tasks/view_task.html', context)
+
+def show_homepage(request):
+    return render(request, 'tasks/index.html')  
