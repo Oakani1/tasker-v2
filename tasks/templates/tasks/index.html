@@ -46,6 +46,11 @@
       Success: {{message}}
     </div>
     {% endif %}
+    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+    <div class="alert alert-danger" role="alert">
+      Error: {{message}}
+    </div>
+    {% endif %}
     {% endfor %}
     {% endif %}
 
