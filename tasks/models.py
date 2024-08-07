@@ -2,10 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 
 STATUS = ((0, "Pending"), (1, "In progress"), (2, "Complete"), (3, "Late"))
+PRIORITY = ((0, "Low"), (1, "Medium"), (2, "High"))
 
 class Task(models.Model):
     task_name = models.CharField(max_length=200, null=False, blank=False)
     description = models.TextField(blank=True)
+    priority = models.IntegerField(choices=PRIORITY, default=0)
     user_name = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="task"
     )

@@ -18,7 +18,11 @@ def show_homepage(request):
 
 def create_task(request):
     if request.method =="POST":
-        pass    
+        form = TaskForm(request.POST)
+        if form.is_valid() :
+            form.save()
+            return redirect('home')
+        
     else:
         #GET Request
         form = TaskForm()
