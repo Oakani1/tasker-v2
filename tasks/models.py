@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib import messages
 
 STATUS = ((0, "Pending"), (1, "In progress"), (2, "Complete"), (3, "Late"))
 PRIORITY = ((0, "Low"), (1, "Medium"), (2, "High"))

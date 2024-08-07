@@ -16,7 +16,8 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <img src="{% static 'images/tasker' %}" alt="Tasker Logo" width="30" height="24">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -38,6 +39,16 @@
     </div>
   </nav>
   <section>
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+    <div class="alert alert-success" role="alert">
+      Success: {{message}}
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
     <h1>Optimize Your Daily Routine with TasKer</h1>
     <p>
       TasKer is your personal assistant for staying on top of your daily routine. Easily create and manage to-do
@@ -46,6 +57,9 @@
     </p>
     <button type="button" class="btn btn-primary btn-lg">Try for free</button>
   </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

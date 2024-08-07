@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Task
 from .forms import TaskForm
+from django.contrib import messages
 
 
 # Create your views here.
@@ -21,10 +22,11 @@ def create_task(request):
         form = TaskForm(request.POST)
         if form.is_valid() :
             form.save()
-            return redirect('home')
-        
+            messages.success(request, "Task Saved!")
+            return redirect("home")
+      
     else:
-        #GET Request
+        #handle a GET Request
         form = TaskForm()
         context = {
             "form": form,
