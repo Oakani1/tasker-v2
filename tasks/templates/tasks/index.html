@@ -60,11 +60,11 @@
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">{{task.task_name}}</h5>
-        <p class="card-text">{{task.description | truncatechars:100}}</p>
+        <p class="card-text">{{task.description | truncatechars:100}}</p>   
+        <a href="{% url 'delete' task.id %}" class="btn btn-outline-primary">Delete</a>
         <a href="{% url 'edit' task.id %}" class="btn btn-primary">View</a>
-        {% if  task.user_name == request.user %}
-        <a href="{% url 'delete' task.id %}" class="btn btn-primary">Delete</a>
-        {% endif %}
+        
+        
       </div>
     </div>
     {% endif %}
