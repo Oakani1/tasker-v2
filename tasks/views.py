@@ -3,8 +3,15 @@ from .models import Task
 from .forms import TaskForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView
 
 # Create your views here.
+
+
+#class Homepage(TemplateView):
+    #template_name = 'tasks/home.html'
+def HomePage(request):
+        return render(request, 'tasks/home.html')  
 
 
 @login_required
