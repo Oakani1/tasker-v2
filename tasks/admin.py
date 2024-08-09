@@ -1,6 +1,15 @@
 from django.contrib import admin
-
-# Register your models here.
+from django_summernote.admin import SummernoteModelAdmin
 from .models import Task
+# Register your models here.
 
-admin.site.register(Task)
+@admin.register(Task)
+class PostAdmin(SummernoteModelAdmin):
+
+    list_display = ('task_name', 'description', 'priority', 'status')
+    search_fields = ['task_name']
+    list_filter = ('status',)
+    prepopulated_fields = {'task_name': ('status',)}
+    summernote_fields = ('description',)
+
+#admin.site.register(Task)

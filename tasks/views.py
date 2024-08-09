@@ -11,7 +11,13 @@ from django.views.generic import TemplateView
 #class Homepage(TemplateView):
     #template_name = 'tasks/home.html'
 def HomePage(request):
-        return render(request, 'tasks/home.html')  
+        return render(request, 'tasks/index.html')
+
+def SignInPage(request):
+        return render(request, 'tasks/sign_in.html')
+
+def SignUpPage(request):
+        return render(request, 'tasks/sign_up.html')                      
 
 
 @login_required
@@ -29,7 +35,7 @@ def show_task_page(request):
     context = {
         "tasks": all_tasks,
     }
-    return render(request, 'tasks/index.html', context)  
+    return render(request, 'tasks/tasks.html', context)  
 
 @login_required
 def create_task(request):
