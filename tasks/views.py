@@ -4,6 +4,8 @@ from .forms import TaskForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.shortcuts import render
 
 # Create your views here.
 
@@ -20,6 +22,7 @@ def SignUpPage(request):
         return render(request, 'tasks/sign_up.html')                      
 
 
+
 @login_required
 def show_task(request, task_id):
     retrieved_task = get_object_or_404(Task, id=task_id)
@@ -30,12 +33,17 @@ def show_task(request, task_id):
 
     return render(request, 'tasks/view_task.html', context)
 
+
 def show_task_page(request):
     all_tasks = Task.objects.all()
     context = {
         "tasks": all_tasks,
     }
-    return render(request, 'tasks/tasks.html', context)  
+    return render(request, 'tasks/tasks.html', context)
+    template_name = "blog/index.html"
+    paginate_by = 6  
+
+
 
 @login_required
 def create_task(request):
@@ -51,6 +59,7 @@ def create_task(request):
         form = TaskForm()
         context = {"form": form, }
         return render(request, 'tasks/create_task.html', context)
+
 
 @login_required
 def edit_task(request, task_id):
@@ -72,6 +81,7 @@ def edit_task(request, task_id):
         form = TaskForm(instance=retrieved_task)
         context = {"form": form, }
         return render(request, 'tasks/edit_task.html', context)
+
 
 @login_required
 def delete_task(request, task_id):
