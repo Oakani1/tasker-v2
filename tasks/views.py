@@ -19,7 +19,10 @@ def SignInPage(request):
         return render(request, 'tasks/sign_in.html')
 
 def SignUpPage(request):
-        return render(request, 'tasks/sign_up.html')                      
+        return render(request, 'tasks/sign_up.html')
+
+def LogOutPage(request):
+        return render(request, 'tasks/log_out.html')                       
 
 
 
