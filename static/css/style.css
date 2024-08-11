@@ -8,3 +8,9 @@
 p, h1, h2, h3, h4 {
     font-family: Poppins, sans-serif;
 }
+
+.btn-style {
+    background-color: #504CEA;
+    font-family: Poppins, sans-serif;
+    border-radius: 10px;
+}

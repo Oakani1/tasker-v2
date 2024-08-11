@@ -6,7 +6,7 @@ from .models import Task
 @admin.register(Task)
 class PostAdmin(SummernoteModelAdmin):
 
-    list_display = ('task_name', 'description', 'priority', 'status')
+    list_display = ('task_name', 'user_name', 'description', 'priority', 'status')
     search_fields = ['task_name']
     list_filter = ('status',)
     prepopulated_fields = {'task_name': ('status',)}

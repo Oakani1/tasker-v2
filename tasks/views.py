@@ -12,23 +12,28 @@ from django.shortcuts import render
 
 #class Homepage(TemplateView):
     #template_name = 'tasks/home.html'
+
+
+#def SignInPage(request):
+#        return render(request, 'tasks/sign_in.html')
+
+#def SignUpPage(request):
+#        return render(request, 'tasks/sign_up.html')
+
+#def LogOutPage(request):
+#        return render(request, 'tasks/log_out.html')                       
+
 def HomePage(request):
         return render(request, 'tasks/index.html')
-
-def SignInPage(request):
-        return render(request, 'tasks/sign_in.html')
-
-def SignUpPage(request):
-        return render(request, 'tasks/sign_up.html')
-
-def LogOutPage(request):
-        return render(request, 'tasks/log_out.html')                       
-
-
 
 @login_required
 def show_task(request, task_id):
     retrieved_task = get_object_or_404(Task, id=task_id)
+    
+     # Check if the logged-in user is the owner of the task
+    if retrieved_task.user_name != request.user:
+        # Handle unauthorized access 
+        return redirect('tasks')  # rediectes to task page if user does not own the task
 
     context = {
         "task": retrieved_task,
@@ -36,14 +41,14 @@ def show_task(request, task_id):
 
     return render(request, 'tasks/view_task.html', context)
 
-
+@login_required
 def show_task_page(request):
     all_tasks = Task.objects.all()
     context = {
         "tasks": all_tasks,
     }
     return render(request, 'tasks/tasks.html', context)
-    template_name = "blog/index.html"
+    template_name = "task/tasks.html"
     paginate_by = 6  
 
 
@@ -67,6 +72,12 @@ def create_task(request):
 @login_required
 def edit_task(request, task_id):
     retrieved_task = get_object_or_404(Task, id=task_id)
+
+    # Check if the logged-in user is the owner of the task
+    if retrieved_task.user_name != request.user:
+        # Handle unauthorized access 
+        return redirect('tasks')  # rediectes to task page if user does not own the task
+
 
     if not request.user == retrieved_task.user_name and not request.user.is_superuser:
         messages.error(request, "You can not edit a task that you did not create")
