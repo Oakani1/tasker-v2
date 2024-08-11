@@ -55,7 +55,7 @@ def create_task(request):
         if form.is_valid() :
             form.save()
             messages.success(request, "Your task is Saved!")
-            return redirect("home")
+            return redirect("tasks")
       
     else:
         #handle a GET Request
@@ -70,7 +70,7 @@ def edit_task(request, task_id):
 
     if not request.user == retrieved_task.user_name and not request.user.is_superuser:
         messages.error(request, "You can not edit a task that you did not create")
-        return redirect("home")
+        return redirect("tasks")
 
     if request.method =="POST":
         
@@ -78,7 +78,7 @@ def edit_task(request, task_id):
         if form.is_valid() :
             form.save()
             messages.success(request, "Your task is updated!")
-            return redirect("home")
+            return redirect("tasks")
       
     else:   
         form = TaskForm(instance=retrieved_task)
@@ -92,12 +92,12 @@ def delete_task(request, task_id):
 
     if not request.user == retrieved_task.user_name and not request.user.is_superuser:
         messages.error(request, "You can not delete a task that you did not create")
-        return redirect("home")
+        return redirect("tasks")
 
     if request.method =="POST":
         retrieved_task.delete()
         messages.success(request, "Your task was deleted")
-        return redirect("home")
+        return redirect("tasks")
       
     else:   
         context = {"task": retrieved_task, }

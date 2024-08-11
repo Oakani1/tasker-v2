@@ -21,6 +21,7 @@
         {% endfor %}
     {% endif %}
 <h1>Tasks</h1>
+
     {% for task in tasks %}
     {% if  task.user_name == request.user %}
     <div class="card" style="width: 18rem;">
