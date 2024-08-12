@@ -5,9 +5,9 @@
 
 <!-- index.html content starts here -->
 
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-6 col-xl-4">
+<div class="container ">
+    <div class="row d-flex justify-content-between">
+        <div class="col-12 col-md-5 col-xl-5 mt-lg-5 pt-lg-5">
             <h1 id="main-heading"> Optimize Your Daily Routine with TasKer</h1>
             <p>TasKer is your personal assistant for staying on top of your daily routine. Easily create and manage
                 to-do lists,
@@ -20,21 +20,13 @@
             </a>
         </div>
 
-        <div>
-            <img src="{% static 'images/tasker_hero_image_young_woman.png' %}" class="col-12 col-md-6 col-xl-4" id="hero-image"
+        <div class="col-12 col-md-6 col-xl-6" >
+            <img src="{% static 'images/tasker_hero_image_young_woman.png' %}" class="col-12" id="hero-image"
                 alt="Young woman in suit">
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6">
-        </div>
-      <div class="col-12 col-md-6">
-        </div>
-    </div>
-  </div>
   
 <!-- pagenation -->
 {% if is_paginated %}
