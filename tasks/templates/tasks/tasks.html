@@ -7,11 +7,13 @@
 <!-- index.html content starts here -->
   <section>
       
-<p>Hello {{user}}</p>   
-<h1>Tasks List</h1>
+<div class="col-12, col-md-3 mb-md-5 mb-3">
+    <p>Hello {{user}}</p>   
+<h1 class="dahsboard-heading">Tasks</h1>
 
-<p>Manage your tasks</p>
-<a href="{% url 'create' %}"  type="button" class="btn btn-primary btn-lg btn-style col-md-2 col-12 ">Add New</a>
+<p class="text-center-align">Manage your tasks</p>
+<a href="{% url 'create' %}"  type="button" class="btn btn-primary btn-lg btn-style col-12 ">Add New</a>
+</div>
 
     {% for task in tasks %}
     {% if  task.user_name == request.user %}

@@ -26,6 +26,11 @@ p, h1, h2, h3, h4 {
     font-size: 4rem;
 }
 
+.dahsboard-heading {
+    font-size: 5rem;
+}
+
+
 #hero-image {
     border-radius: 1.5rem;
 }
@@ -42,6 +47,14 @@ p, h1, h2, h3, h4 {
 
     #main-heading {
         font-size: 40px;
+    }
+
+    .dahsboard-heading {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .text-center-align {
+        text-align: center;
     }
 
 }
