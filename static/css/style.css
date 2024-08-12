@@ -13,4 +13,26 @@ p, h1, h2, h3, h4 {
     background-color: #504CEA;
     font-family: Poppins, sans-serif;
     border-radius: 10px;
+    font-weight: 500;
+}
+
+.btn-style-large {
+    line-height: 3rem;
+    font-size: 1.5rem;
+
+}
+
+#main-heading {
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+#hero-image {
+    border-radius: 1.5rem;
+}
+
+.btn-href-margin {
+    padding-left: 0;
+    padding-right: 0;
+
 }
