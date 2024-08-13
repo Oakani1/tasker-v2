@@ -39,7 +39,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
         <div class="container ">
             <div class="d-flex">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{% url 'home' %}">
                     <img src="{% static 'images/tasker_logo.png' %}" alt="Tasker Logo" width="150">
                 </a>
                 <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
@@ -71,7 +71,7 @@
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_logout' %}">Logout</a>
+                            href="{% url 'account_logout' %}">Sign Out</a>
                     </li>
                     {% else %}
                 </ul>
@@ -100,7 +100,7 @@
     {% endfor %}
     {% endif %}
 
-    <main class="container mb-5">
+    <main class="container">
 
         {% block content %}
         <!-- Content Goes here -->

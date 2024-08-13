@@ -5,34 +5,38 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<div class="container">
+
+{% load crispy_forms_tags %}
+
+<div class="container p-0">
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
+    <div class="col-12 col-md-4 mt-3">
       <h3>{% trans "Sign Up" %}</h3>
 
       <p>{% blocktrans %}
-        Welcome back to the code|star blog.
+        Welcome back to the TasKer.
         Do you already have an account? Then please
         <a class="link" href="{{ login_url }}">sign in</a>
         instead.
-      {% endblocktrans %}</p>
+        {% endblocktrans %}
+      </p>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <form class="signup" id="signup_form" method="post"
-        action="{% url 'account_signup' %}">
+    <div class="col-12 col-md-4 mt-3">
+      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form | crispy }}
         {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}"
-          value="{{ redirect_field_value }}" />
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-signup btn-primary btn-style " type="submit">
-          {% trans "Sign Up" %} &raquo;</button>
+        <button class="btn  btn-primary btn-style col-12 btn-lg" type="submit">
+          {% trans "Sign Up" %}</button>
       </form>
+      
+    </div>
     </div>
   </div>
-</div>
+
 
 {% endblock %}
