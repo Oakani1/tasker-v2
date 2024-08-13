@@ -53,23 +53,43 @@ def show_task_page(request):
     paginate_by = 6  
 
 
-
-@login_required
+#Create a task
+"""@login_required
 def create_task(request):
     if request.method =="POST":
         form = TaskForm(request.POST)
         if form.is_valid() :
+            user_name = request.user
             form.save()
             messages.success(request, "Your task is Saved!")
             return redirect("tasks")
       
     else:
         #handle a GET Request
-        form = TaskForm()
+        form = TaskForm(initial={'user_name': request.user})
+        context = {"form": form, }
+        return render(request, 'tasks/create_task.html', context)
+"""
+@login_required
+def create_task(request):
+    if request.method == "POST":
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            user_name = request.user
+            form.save()
+            messages.success(request,
+            "Your task is Saved!")
+            return redirect("tasks")
+    else:
+        # Prepopulate user_name
+        form = TaskForm(initial={'user_name': request.user})
         context = {"form": form, }
         return render(request, 'tasks/create_task.html', context)
 
 
+
+
+#Edit a Task
 @login_required
 def edit_task(request, task_id):
     retrieved_task = get_object_or_404(Task, id=task_id)
