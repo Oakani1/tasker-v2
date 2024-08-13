@@ -4,15 +4,18 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<body>
-<section  >
 
-  <div class="col-12, col-md-4 mb-md-5 mb-3">
-    <p class="text-center-align"><strong >Hello {{user}}</strong></p>
-    <h1 class="dashboard-heading">Tasks</h1>
+
+
+  
+<div class="col-12, col-md-3 mb-md-5 mb-3">
+    <p class="text-center-align">
+      <strong aria-live="polite">Hello {{ user }}</strong>
+      </p>
+    <h1 class="dashboard-heading" aria-level="1">Tasks</h1>
 
     <p class="text-center-align">Manage your tasks</p>
-    <a href="{% url 'create' %}" type="button" class="btn btn-primary btn-lg btn-style col-12 ">Add New</a>
+    <a href="{% url 'create' %}" class="btn btn-primary btn-lg btn-style col-12 ">Add New</a>
   </div>
 
 
@@ -29,13 +32,13 @@
         <div class="card-body ">
           <div class="d-flex mb-2">
             <div class="col-4">
-              <p class="card-text" id="percentage">{{task.progress}}%</p>
+              <p class="percentage mb-0">{{task.progress}}%</p>
               <p class="card-text text-bottom">{{task.get_status_display}}</p>
             </div>
             <div class="col-8">
               <p class="card-title mb-1">{{task.task_name}}</p>
               <p class="card-text">{{task.get_priority_display}} priority</p>
-              <p class="card-text" id="time-text">{{task.start_time}}</span></p>
+              <p class="card-text time-text">{{task.start_time}}</p>
             </div>
 
           </div>
@@ -43,9 +46,7 @@
 
           <div class="align-self-bottom">
             <a href="{% url 'delete' task.id %}" class="btn btn-outline-primary">Delete</a>
-            <a href="{% url 'edit' task.id %}">
-              <button type="button" class=" btn btn-primary btn-style">View</button>
-            </a>
+            <a href="{% url 'edit' task.id %} " class="btn btn-primary btn-style"> View </a>
 
           </div>
 
@@ -59,10 +60,10 @@
 
 
 
-</section>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+
 
 {% endblock %}

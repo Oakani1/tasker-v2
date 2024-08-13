@@ -7,7 +7,7 @@
 <!-- index.html content starts here -->
 <body>
     <h1>Are you sure you want to delete "{{ task.task_name }}"</h1>
-    <Form method="POST">
+    <Form method="POST" role="form" aria-labelledby="delete-confirmation">
         {% csrf_token %}
         <a href="{% url 'tasks' %}" class="btn btn-outline-primary">Cancel</a>
         <button type="submit" class="btn btn-primary">Delete</button>

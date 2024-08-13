@@ -54,22 +54,7 @@ def show_task_page(request):
 
 
 #Create a task
-"""@login_required
-def create_task(request):
-    if request.method =="POST":
-        form = TaskForm(request.POST)
-        if form.is_valid() :
-            user_name = request.user
-            form.save()
-            messages.success(request, "Your task is Saved!")
-            return redirect("tasks")
-      
-    else:
-        #handle a GET Request
-        form = TaskForm(initial={'user_name': request.user})
-        context = {"form": form, }
-        return render(request, 'tasks/create_task.html', context)
-"""
+
 @login_required
 def create_task(request):
     if request.method == "POST":

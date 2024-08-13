@@ -10,7 +10,7 @@
 
 <head>
     <title>TasKer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -48,43 +48,43 @@
                 </button>
             </div>
             <div class="align-items-center">
-            <div class="collapse navbar-collapse ms-auto" id="navbarScroll">
-                <ul class="navbar-nav mb-2 mb-lg-0 align-self-end">
-                    {% if not user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'home' %}">Home</a>
-                    </li>
-                    {% else %}
+                <div class="collapse navbar-collapse ms-auto" id="navbarScroll">
+                    <ul class="navbar-nav mb-2 mb-lg-0 align-self-end">
+                        {% if not user.is_authenticated %}
+                        <li class="nav-item m">
+                            <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                                href="{% url 'home' %}">Home</a>
+                        </li>
+                        {% else %}
+                        {% endif %}
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == tasks_url %}active{% endif %}" aria-current="page"
+                                href="{% url 'tasks' %}">Tasks</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                                href="{% url 'account_login' %}">Sign-In</a>
+                        </li>
+                        {% endif %}
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                                href="{% url 'account_logout' %}">Sign Out</a>
+                        </li>
+                    </ul>
+
+                        {% else %}
+                    </ul>
+                    <a href="{% url 'account_signup' %}" class="btn btn-primary btn-style ">Create Account</a>    
+                
                     {% endif %}
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == tasks_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'tasks' %}">Tasks</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_login' %}">Sign-In</a>
-                    </li>
-                    {% endif %}
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_logout' %}">Sign Out</a>
-                    </li>
-                    {% else %}
-                </ul>
-                <a class="nav-link {% if request.path == signup_url %}active{% endif %} p-0 ps-3"
-                    href="{% url 'account_signup' %}">
-                    <button type="button" class="btn btn-primary btn-style">Create Account</button>
-                </a>
-                {% endif %}
+                </div>
             </div>
         </div>
-        </div>
     </nav>
-    
+
     {% if messages %}
     {% for message in messages %}
     {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
@@ -112,7 +112,6 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    </script>
 </body>
 
 </html>
