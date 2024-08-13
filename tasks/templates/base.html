@@ -88,19 +88,19 @@
     {% if messages %}
     {% for message in messages %}
     {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-success top-pg-margin" role="alert">
         Success: {{message}}
     </div>
     {% endif %}
     {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-danger top-pg-margin" role="alert">
         Error: {{message}}
     </div>
     {% endif %}
     {% endfor %}
     {% endif %}
 
-    <main class="container" id="top-pg-margin">
+    <main class="container top-pg-margin">
 
         {% block content %}
         <!-- Content Goes here -->

@@ -8,62 +8,64 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 
-# Create your views here.
+          
 
-
-#class Homepage(TemplateView):
-    #template_name = 'tasks/home.html'
-
-
-#def SignInPage(request):
-#        return render(request, 'tasks/sign_in.html')
-
-#def SignUpPage(request):
-#        return render(request, 'tasks/sign_up.html')
-
-#def LogOutPage(request):
-#        return render(request, 'tasks/log_out.html')                
 
 def HomePage(request):
-        return render(request, 'tasks/index.html')
+    """
+    Renders the landing page, giving option to sign in
+     or start managing tasks if logged in.
+    """
+    return render(request, 'tasks/index.html')
+
 
 @login_required
 def show_task(request, task_id):
+    """
+    Retrieves and displays a specific task.
+    Ensures that only the task owner can view the task.
+    """
     retrieved_task = get_object_or_404(Task, id=task_id)
-    
-     # Check if the logged-in user is the owner of the task
+    # Check if the logged-in user is the owner of the task
     if retrieved_task.user_name != request.user:
-        # Handle unauthorized access 
-        return redirect('tasks')  # rediectes to task page if user does not own the task
-
+        # Handle unauthorized access
+        # rediectes to task page if user does not own the task
+        return redirect('tasks')
     context = {
         "task": retrieved_task,
-    }
-
+        }
     return render(request, 'tasks/view_task.html', context)
+
 
 @login_required
 def show_task_page(request):
+    """
+    Displays a list of all tasks that a logged in user has created.
+
+    """
     all_tasks = Task.objects.all()
     context = {
         "tasks": all_tasks,
     }
     return render(request, 'tasks/tasks.html', context)
     template_name = "task/tasks.html"
-    paginate_by = 6  
+    paginate_by = 6
 
 
-#Create a task
+
 
 @login_required
 def create_task(request):
+    """
+    Handles creating a new task for a logged in user
+    redirects to task list
+    """
     if request.method == "POST":
         form = TaskForm(request.POST)
         if form.is_valid():
             user_name = request.user
             form.save()
-            messages.success(request,
-            "Your task is Saved!")
+            messages.success(request, "Your task is Saved!")
             return redirect("tasks")
     else:
         # Prepopulate user_name
@@ -72,32 +74,31 @@ def create_task(request):
         return render(request, 'tasks/create_task.html', context)
 
 
-
-
-#Edit a Task
 @login_required
 def edit_task(request, task_id):
+    """
+    Edits an existing task, only logged in users can edit
+    redirects to task list
+    """
     retrieved_task = get_object_or_404(Task, id=task_id)
 
     # Check if the logged-in user is the owner of the task
     if retrieved_task.user_name != request.user:
-        # Handle unauthorized access 
-        return redirect('tasks')  # rediectes to task page if user does not own the task
-
+        # Handle unauthorized access
+        # rediectes to task page if user does not own the task
+        return redirect('tasks')
 
     if not request.user == retrieved_task.user_name and not request.user.is_superuser:
         messages.error(request, "You can not edit a task that you did not create")
         return redirect("tasks")
 
-    if request.method =="POST":
-        
+    if request.method == "POST":
         form = TaskForm(request.POST, instance=retrieved_task)
-        if form.is_valid() :
+        if form.is_valid():
             form.save()
             messages.success(request, "Your task is updated!")
             return redirect("tasks")
-      
-    else:   
+    else:
         form = TaskForm(instance=retrieved_task)
         context = {"form": form, }
         return render(request, 'tasks/edit_task.html', context)
@@ -105,18 +106,21 @@ def edit_task(request, task_id):
 
 @login_required
 def delete_task(request, task_id):
+    """
+    Deletes a task for a logged in user
+    redirects to task list
+    """
     retrieved_task = get_object_or_404(Task, id=task_id)
 
     if not request.user == retrieved_task.user_name and not request.user.is_superuser:
         messages.error(request, "You can not delete a task that you did not create")
         return redirect("tasks")
 
-    if request.method =="POST":
+    if request.method == "POST":
         retrieved_task.delete()
         messages.success(request, "Your task was deleted")
         return redirect("tasks")
-      
-    else:   
+    else:
         context = {"task": retrieved_task, }
         return render(request, 'tasks/delete_task.html', context)    
         

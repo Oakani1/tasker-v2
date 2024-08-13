@@ -17,11 +17,11 @@
             </p>
             {% if not user.is_authenticated %}
             <form action="{% url 'account_signup' %}" method="get">
-                <button type="submit" class="btn-style-large btn-lg btn-primary btn-style col-12 col-lg-6">Try for free</button>
+                <button type="submit" class="btn btn-style-large btn-lg btn-primary btn-style col-12 col-lg-6 mb-3">Try for free</button>
               </form>
             {% else %}
             <form action="{% url 'tasks' %}" method="get">
-                <button type="submit" class="btn-style-large btn-lg btn-primary btn-style col-12 col-lg-8 mb-3">Manage Your Tasks</button>
+                <button type="submit" class="btn btn-style-large btn-lg btn-primary btn-style col-12 col-lg-8 mb-3">Manage Your Tasks</button>
             </form>
             {% endif %}
         </div>
