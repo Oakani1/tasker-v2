@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
 
@@ -21,7 +22,7 @@ from django.shortcuts import render
 #        return render(request, 'tasks/sign_up.html')
 
 #def LogOutPage(request):
-#        return render(request, 'tasks/log_out.html')                       
+#        return render(request, 'tasks/log_out.html')                
 
 def HomePage(request):
         return render(request, 'tasks/index.html')
