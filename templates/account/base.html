@@ -12,7 +12,7 @@
     {% block body %}
 
     {% if messages %}
-    <div>
+    <div role="alert" aria-live="assertive">
       <strong>{% trans "Messages:" %}</strong>
       <ul>
         {% for message in messages %}

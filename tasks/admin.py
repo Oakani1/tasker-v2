@@ -12,4 +12,3 @@ class PostAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'task_name': ('status',)}
     summernote_fields = ('description',)
 
-#admin.site.register(Task)

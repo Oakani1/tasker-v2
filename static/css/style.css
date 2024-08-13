@@ -24,6 +24,13 @@ p, h1, h2, h3, h4 {
     border-color: #504CEA;
 }
 
+.btn-style-wht {
+    background-color: white;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    border-color: #504CEA;
+}
+
 .btn-style-large {
     line-height: 3rem;
     font-size: 1.5rem;
@@ -31,7 +38,9 @@ p, h1, h2, h3, h4 {
 }
 
 
-
+.nav-link {
+    text-decoration: none; /* Remove underline */
+  }
 #main-heading {
     font-weight: bold;
     font-size: 4rem;
@@ -61,8 +70,8 @@ p, h1, h2, h3, h4 {
     
 }
 
-#percentage{
-    font-size: 28px;
+.percentage {
+    font-size: 29px;
     font-weight: bold;
     color: #504CEA;
 
@@ -78,7 +87,7 @@ p, h1, h2, h3, h4 {
     font-weight: 600;
 }
 
-#time-text{
+.time-text{
     color: #BEC0C7;
 }
 
@@ -86,7 +95,7 @@ p, h1, h2, h3, h4 {
     height: 100vh;
 }
 
-#top-pg-margin {
+.top-pg-margin {
     margin-top: 100px;
 }
 
@@ -118,7 +127,16 @@ p, h1, h2, h3, h4 {
 @media (min-width: 1024px) {
 
     #main-heading {
+        font-size: 50px;
+    }
+
+
+/* Desktop 1440*/
+@media (min-width: 1440px) {
+
+    #main-heading {
         font-size: 70px;
     }
 
+}
 }

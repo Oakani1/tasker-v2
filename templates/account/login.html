@@ -21,7 +21,7 @@
     </div>
     <div class="row">
         <div class="col-md-4 mt-3">
-            <form class="login" method="POST" action="{% url 'account_login' %}">
+            <form class="login" method="POST" action="{% url 'account_login' %}"  aria-label="Login Form">
                 {% csrf_token %}
                 {{ form | crispy }}
                 {% if redirect_field_value %}
