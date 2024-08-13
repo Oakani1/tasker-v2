@@ -1,6 +1,142 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+body{
+    font-family: Poppins, sans-serif;
+    padding-bottom: 20px;
+    background-color: #FAFAFA;
+}
 
-.text-test {
-    color: red;
+
+
+p, h1, h2, h3, h4 {
+    font-family: Poppins, sans-serif;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+
+.btn-style {
+    background-color: #504CEA;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    border-color: #504CEA;
+}
+
+.btn-style-wht {
+    background-color: white;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    border-color: #504CEA;
+}
+
+.btn-style-large {
+    line-height: 3rem;
+    font-size: 1.5rem;
+
+}
+
+
+.nav-link {
+    text-decoration: none; /* Remove underline */
+  }
+#main-heading {
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.dashboard-heading {
+    font-size: 3rem;
+    text-align: center;
+}
+.text-center-align {
+    text-align: center;
+}
+
+
+#hero-image {
+    border-radius: 1.5rem;
+}
+
+.btn-href-margin {
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+.card-style {
+    border-radius: 10px;
+    
+}
+
+.percentage {
+    font-size: 29px;
+    font-weight: bold;
+    color: #504CEA;
+
+}
+
+.card-text{
+    font-size: 12px;
+    margin: 0;
+}
+
+.card-title{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.time-text{
+    color: #BEC0C7;
+}
+
+#landing-pg-view {
+    height: 100vh;
+}
+
+.top-pg-margin {
+    margin-top: 100px;
+}
+
+/* Small devices (phones) */
+@media (min-width: 320px) {
+
+    #main-heading {
+        font-size: 40px;
+    }
+
+}
+
+/* Tablets*/
+@media (min-width: 768px) {
+
+    #main-heading {
+        font-size: 30px;
+    }
+    .dashboard-heading {
+        font-size: 5rem;
+        text-align: left;
+    }
+    .text-center-align {
+        text-align: left;
+    }
+}
+
+/* Desktop 1024*/
+@media (min-width: 1024px) {
+
+    #main-heading {
+        font-size: 50px;
+    }
+
+
+/* Desktop 1440*/
+@media (min-width: 1440px) {
+
+    #main-heading {
+        font-size: 70px;
+    }
+
+}
 }
