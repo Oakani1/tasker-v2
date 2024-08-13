@@ -3,6 +3,7 @@
 body{
     font-family: Poppins, sans-serif;
     padding-bottom: 20px;
+    background-color: #FAFAFA;
 }
 
 
@@ -36,8 +37,12 @@ p, h1, h2, h3, h4 {
     font-size: 4rem;
 }
 
-.dahsboard-heading {
-    font-size: 5rem;
+.dashboard-heading {
+    font-size: 3rem;
+    text-align: center;
+}
+.text-center-align {
+    text-align: center;
 }
 
 
@@ -81,37 +86,39 @@ p, h1, h2, h3, h4 {
     height: 100vh;
 }
 
+#top-pg-margin {
+    margin-top: 100px;
+}
+
 /* Small devices (phones) */
-@media (max-width: 576px) {
+@media (min-width: 320px) {
 
     #main-heading {
         font-size: 40px;
     }
 
-    .dahsboard-heading {
-        font-size: 3rem;
-        text-align: center;
-    }
-    .text-center-align {
-        text-align: center;
-    }
-
 }
 
 /* Tablets*/
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 
     #main-heading {
         font-size: 30px;
     }
-
+    .dashboard-heading {
+        font-size: 5rem;
+        text-align: left;
+    }
+    .text-center-align {
+        text-align: left;
+    }
 }
 
 /* Desktop 1024*/
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
 
     #main-heading {
-        font-size: 30px;
+        font-size: 70px;
     }
 
 }
