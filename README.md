@@ -15,17 +15,18 @@ The project was created as part of my Capstone project with Code Institute
 
 ## Contents
 
-1. Priotisation
-  2. User Story Map
-  3. MOSCOW
-5. UX Design
-6. Agile Development
-7. Technology Used
-8. Testing
-9. Bugs
-10. Deployment
-11. Resources
-12. Credits and acknowledgements
+1.	Prioritization
+2.	User Story Map
+3.	Impact/Effort
+4.	MOSCOW
+5.	User Stories
+ * Features
+ * User stories
+6.	Design
+7.	Testing
+8.	Known Bugs
+9.	Credits
+
 
 ## Priotisation
 ### User Story Map
@@ -55,19 +56,23 @@ The landing page features a prominent call to action and intuitive navigation wi
 <img src="images/readme/desktop_and_mobile_landing_v2.png" alt="landing page">
 
 ### User Authentication
-* **Sign In:** Users can access their existing accounts from the landing page.
+**Sign In:** Users can access their existing accounts from the landing page.
 <img src="images/readme/sign_in.png" alt="sign in page">
-* **Sign Up:** Users without accounts can create new ones.
+
+**Sign Up** Users without accounts can create new ones.
 <img src="images/readme/sign_up.png" alt="sign up page">
 
 ### Task Management
-* **Dashboard:** Upon login, users are directed to a dashboard where they can add tasks.
+**Dashboard:** Upon login, users are directed to a dashboard where they can add tasks.
 <img src="images/readme/empty_dashboard.png" alt="empty dashboard">
-* **Task Creation:** Users can create tasks, specifying name, description, priority, time, status, and progress.
+
+**Task Creation:** Users can create tasks, specifying name, description, priority, time, status, and progress.
 <img src="images/readme/add_task.png" alt="Add new Task">
-* **Task View:** All created tasks are accessible for viewing.
+
+***Task View:** All created tasks are accessible for viewing.
 <img src="images/readme/task_view.png" alt="Added tasks">
-* **Task Modification:** Users can edit or delete existing tasks.
+
+**Task Modification:** Users can edit or delete existing tasks.
 <img src="images/readme/Edit.png" alt="edit task">
 <img src="images/readme/delete.png" alt="delete task">
 
@@ -161,7 +166,7 @@ The later phase of development should prioritize features related to user manage
 | Filter tasks | Won't have |
 | Upcoming tasks | Won't have |<img src="images/readme/MOSCOW.jpg" alt="MOSCOW table" width ="500">
 
-### Ipact and Effort
+### Impact and Effort
 Feature | Impact | Effort | Score |
 |---|---|---|---|
 | Core landing page elements (header, navigation, information) | 4 | 2 | 8 |
@@ -241,9 +246,6 @@ The design for the MVP had to be changed to accomodate for time, but will be upd
 ## Testing Summary
 this project underwent a comprehensive manual testing process to ensure functionality, accessibility, and performance.
 
-## Testing Summary
-
-This project underwent a comprehensive testing process to ensure functionality, accessibility, and performance.
 
 ### HTML Validation
 The HTML markup was validated using the W3C Markup Validation Service (https://validator.w3.org/). This step confirmed that the HTML code adheres to web standards and best practices. **No errors** were found during this stage.
