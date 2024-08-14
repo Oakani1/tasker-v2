@@ -55,19 +55,23 @@ The landing page features a prominent call to action and intuitive navigation wi
 <img src="images/readme/desktop_and_mobile_landing_v2.png" alt="landing page">
 
 ### User Authentication
-* **Sign In:** Users can access their existing accounts from the landing page.
+**Sign In:** Users can access their existing accounts from the landing page.
 <img src="images/readme/sign_in.png" alt="sign in page">
-* **Sign Up:** Users without accounts can create new ones.
+
+**Sign Up** Users without accounts can create new ones.
 <img src="images/readme/sign_up.png" alt="sign up page">
 
 ### Task Management
-* **Dashboard:** Upon login, users are directed to a dashboard where they can add tasks.
+**Dashboard:** Upon login, users are directed to a dashboard where they can add tasks.
 <img src="images/readme/empty_dashboard.png" alt="empty dashboard">
-* **Task Creation:** Users can create tasks, specifying name, description, priority, time, status, and progress.
+
+**Task Creation:** Users can create tasks, specifying name, description, priority, time, status, and progress.
 <img src="images/readme/add_task.png" alt="Add new Task">
-* **Task View:** All created tasks are accessible for viewing.
+
+***Task View:** All created tasks are accessible for viewing.
 <img src="images/readme/task_view.png" alt="Added tasks">
-* **Task Modification:** Users can edit or delete existing tasks.
+
+**Task Modification:** Users can edit or delete existing tasks.
 <img src="images/readme/Edit.png" alt="edit task">
 <img src="images/readme/delete.png" alt="delete task">
 
