@@ -15,17 +15,18 @@ The project was created as part of my Capstone project with Code Institute
 
 ## Contents
 
-1. Priotisation
-  2. User Story Map
-  3. MOSCOW
-5. UX Design
-6. Agile Development
-7. Technology Used
-8. Testing
-9. Bugs
-10. Deployment
-11. Resources
-12. Credits and acknowledgements
+1.	Prioritization
+2.	User Story Map
+3.	Impact/Effort
+4.	MOSCOW
+5.	User Stories
+ * Features
+ * User stories
+6.	Design
+7.	Testing
+8.	Known Bugs
+9.	Credits
+
 
 ## Priotisation
 ### User Story Map
@@ -165,7 +166,7 @@ The later phase of development should prioritize features related to user manage
 | Filter tasks | Won't have |
 | Upcoming tasks | Won't have |<img src="images/readme/MOSCOW.jpg" alt="MOSCOW table" width ="500">
 
-### Ipact and Effort
+### Impact and Effort
 Feature | Impact | Effort | Score |
 |---|---|---|---|
 | Core landing page elements (header, navigation, information) | 4 | 2 | 8 |
@@ -245,9 +246,6 @@ The design for the MVP had to be changed to accomodate for time, but will be upd
 ## Testing Summary
 this project underwent a comprehensive manual testing process to ensure functionality, accessibility, and performance.
 
-## Testing Summary
-
-This project underwent a comprehensive testing process to ensure functionality, accessibility, and performance.
 
 ### HTML Validation
 The HTML markup was validated using the W3C Markup Validation Service (https://validator.w3.org/). This step confirmed that the HTML code adheres to web standards and best practices. **No errors** were found during this stage.
