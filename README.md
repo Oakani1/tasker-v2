@@ -236,3 +236,101 @@ The design for the MVP had to be changed to accomodate for time, but will be upd
 <img src="images/readme/landing_hi.png" alt="Hi-fidelity landing page">
 <img src="images/readme/sign_up_hi.png" alt="Hi-fidelity sign up">
 <img src="images/readme/task_hi.png" alt="Hi-fidelity task list">
+
+
+## Testing Summary
+this project underwent a comprehensive manual testing process to ensure functionality, accessibility, and performance.
+
+## Testing Summary
+
+This project underwent a comprehensive testing process to ensure functionality, accessibility, and performance.
+
+### HTML Validation
+The HTML markup was validated using the W3C Markup Validation Service (https://validator.w3.org/). This step confirmed that the HTML code adheres to web standards and best practices. **No errors** were found during this stage.
+
+<img src="images/readme/HTML_Error_checkin_Tasks.png" alt="HTML test" width="700">
+
+
+
+### CSS Validation
+The CSS styles were validated using the W3C CSS Validation Service (https://jigsaw.w3.org/css-validator/). This validation ensured that the CSS code is well-formed and compatible with various browsers. **No errors** were identified in the CSS.
+
+<img src="images/readme/CSS_Error_Checking.png" alt="CSS test" width="700">
+
+
+
+### Python Code Quality
+The Python code was evaluated for consistency and style using a Python linter like Pylint (https://pep8ci.herokuapp.com/). This validation ensures the code adheres to Python coding conventions and best practices, improving readability and maintainability. **No errors** were reported by the linter.
+
+### Performance Testing
+Lighthouse, a performance auditing tool integrated with Chrome DevTools, was used to assess website performance. Lighthouse analyzes factors like page load speed, responsiveness, and best practices, providing recommendations for improvement.  The followin is an example of a page that was analysed. There seems to be perfoamce issues as i may have not optimised the picture, howere on pages with no picture, the performace is very good
+
+<img src="images/readme/light_house_mobile.png" alt="light house mobile" width="700">
+<img src="images/readme/Lighthouse_desktop.png" alt="light house desktop" width="700">
+<img src="images/readme/lighthouse_good.png" alt="Light house good result" width="700">
+
+
+
+### Accessibility Testing
+ChromeVox, a screen reader extension for Chrome, was used to test the website's accessibility for users with visual impairments. This ensured that the website content and functionality are accessible through assistive technologies. **No major accessibility issues** were encountered during this testing phase.
+
+<img src="images/readme/chrome_vox.png" alt="accesibility" width="700">
+
+
+
+
+I also used WAVE to perform acceibility test inlcuding ARIA and contrast
+
+<img src="images/readme/Contrast Check_Wave.png" alt="accesibility" width="700">
+
+### Manual testing
+| Test | Outcome |
+|---|---|
+| Is the purpose of my application obvious to the user? | Pass |
+| Can I navigate to where I need to go easily? | Pass |
+| Is the information layout logical, and of benefit to the user? | Pass |
+| Can I easily read all of the text and quickly identify interactive elements? | Pass |
+| Do I know if I'm logged in or not? | Pass |
+| Can I register? | Pass |
+| Can I log in? | Pass |
+| Can I log out again? | Pass |
+| Am I Notified when I log in? | Pass |
+| Am I Notified when I log out? | Pass |
+| Are all of my templates free of errors when I run them through HTML Validation? | Pass |
+| Do my css stylesheets pass through Jigsaw with no validation errors? | Pass |
+| Is my site responsive and usable across a range of devices/screen widths? | Pass |
+| Does my site meet minimum requirements for accessibility & performance? | Pass |
+| Can a logged in user create a record on a data table via a frontend form? | Pass |
+| Are users notified when a record is created? | Pass |
+| Can a logged in user edit a record they have created? | Pass |
+| Are users notified when a record is edited? | Pass |
+| Can a logged in user delete a record they have created? | Pass |
+| Are users notified when a record is deleted? | Pass |
+| Is a logged out user restriceted from manipulating another user's records? | Pass |
+| Can only authorised users access restricted records/information? | Pass |
+
+### Known Bugs
+Navigation menu does not drop down under burger on some screen sizes
+No other known bugs
+
+### Later improvements
+* These are the quick additions i would make to the sprint
+* Add a colour indicator to the status
+* Add a side menu bar
+* have the edit and create new tasks as pop ups or a slide out tray
+* change the priprity setting to buttons
+
+**Overall, the testing process confirmed that the project meets the desired standards for functionality, accessibility, and performance.**
+
+### Credits
+
+This section details the resources and frameworks utilized in the development of this project.
+
+**Logo:** The logo was sourced from https://ui8.net/cansaas/products/taskio-task-management-dasboard-ui-kit
+
+**Front-End Framework:** Bootstrap 5 was leveraged to streamline the structure and layout of the destinations page and the homepage, ensuring a responsive and consistent design.
+
+**Sign Up/Sign In Pages:** The HTML structure for the sign-up and sign-in pages was repurposed from Code Institute's "I Think Therefore I Blog" project, with the necessary modifications for functionality.
+
+**Fonts:** Google Fonts were employed to provide a diverse selection of fonts for enhanced visual appeal. 
+
