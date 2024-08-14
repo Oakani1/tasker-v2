@@ -8,6 +8,7 @@
 **TasKer is your personal assistant for staying on top of your daily routine. Easily create and manage tasks, set and prioritize tasks, mark as complete. Whether you're juggling coursework, part-time jobs, or social life, TasKer helps you stay organized and focused.**
 
 ## Link to TasKer Site
+https://tasker-management-1d7987a02446.herokuapp.com/
 
 The project was created as part of my Capstone project with Code Institute
 **Created by Oluwole Akani**
