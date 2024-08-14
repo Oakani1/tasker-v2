@@ -29,3 +29,8 @@ Data base planning
 12. Credits and acknowledgements
 
 Priotisation
+I decided to prioritize features by listing out potential requirements for a task manager, considering the user personas of those who might need one. I determined that an app focusing on simple task management for people who want to track chores or important dates would be my Minimum Viable Product (MVP).
+
+I outlined these potential features in a user story map. Then, using the MOSCOW method, I decided which features would be included in the initial release for the MVP, which would come next, and which would be developed later.
+
+## User Story Map
