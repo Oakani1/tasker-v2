@@ -31,7 +31,7 @@ The project was created as part of my Capstone project with Code Institute
 ### User Story Map
 I decided to prioritize features by listing out potential requirements for a task manager, considering the user personas of those who might need one. I determined that an app focusing on simple task management for people who want to track chores or important dates would be my Minimum Viable Product (MVP).
 
-I outlined these potential features in a user story map. Then, using the MOSCOW method, I decided which features would be included in the initial release for the MVP, which would come next, and which would be developed later.
+I outlined these potential features in a user story map. Then, used the Ipact Effort frame work and MOSCOW, I decided which features would be included in the initial release for the MVP, which would come next, and which would be developed later.
 
 #### High level user story
 <img src="images/readme/high_level_user_story.png" alt="High level user story">
@@ -39,21 +39,38 @@ I outlined these potential features in a user story map. Then, using the MOSCOW 
 #### User story map and releases
 <img src="images/readme/user_story_map.png" alt="User story map and releases">
 
-### MOSCOW
-The MOSCOW framework helped me categorize features into Now, Next, and Later, allowing me to focus on what needs to be built for the initial release. NEXT and LATER stage inititives may change based on user feedback.
 
-#### First release (NOW)
+### Impact/Effort
+<img src="images/readme/impact_effort_table_s.png" alt="Impact and effort table" width="700">
+
+
+### MOSCOW
+The MOSCOW framework helped me categorize further by grouping features into Now, Next, and Later, allowing me to focus on what needs to be built for the initial release. NEXT and LATER stage inititives may change based on user feedback.
+
+### First release (NOW)
 The first release primarily consists of must-have and should-have features. The core focus is on building a foundational task management system with essential user authentication. Additional functionalities can be explored in subsequent releases based on user feedback and project priorities.
 
-Long in
+### Landing Page
+The landing page features a prominent call to action and intuitive navigation with clear buttons to guide users.
+<img src="images/readme/desktop_and_mobile_landing_v2.png" alt="landing page">
 
-Sign up
+### User Authentication
+* **Sign In:** Users can access their existing accounts from the landing page.
+<img src="images/readme/sign_in.png" alt="sign in page">
+* **Sign Up:** Users without accounts can create new ones.
+<img src="images/readme/sign_up.png" alt="sign up page">
 
-Create a task
+### Task Management
+* **Dashboard:** Upon login, users are directed to a dashboard where they can add tasks.
+<img src="images/readme/empty_dashboard.png" alt="empty dashboard">
+* **Task Creation:** Users can create tasks, specifying name, description, priority, time, status, and progress.
+<img src="images/readme/add_task.png" alt="Add new Task">
+* **Task View:** All created tasks are accessible for viewing.
+<img src="images/readme/task_view.png" alt="Added tasks">
+* **Task Modification:** Users can edit or delete existing tasks.
+<img src="images/readme/Edit.png" alt="edit task">
+<img src="images/readme/delete.png" alt="delete task">
 
-View All tasks
-
-Edit a Task
 
 #### NEXT
 The subsequent development phase should concentrate on refining the user experience and enhancing task management capabilities. Key areas include
@@ -144,9 +161,78 @@ The later phase of development should prioritize features related to user manage
 | Filter tasks | Won't have |
 | Upcoming tasks | Won't have |<img src="images/readme/MOSCOW.jpg" alt="MOSCOW table" width ="500">
 
+### Ipact and Effort
+Feature | Impact | Effort | Score |
+|---|---|---|---|
+| Core landing page elements (header, navigation, information) | 4 | 2 | 8 |
+| User registration and login | 4 | 3 | 12 |
+| Social media login | 3 | 2 | 6 |
+| Basic task creation and management | 5 | 3 | 15 |
+| Task viewing and editing | 4 | 2 | 8 |
+| Task deletion | 4 | 2 | 8 |
+| Task details | 4 | 2 | 8 |
+| Task prioritization | 3 | 2 | 6 |
+| 2FA | 3 | 2 | 6 |
+| Notifications | 3 | 2 | 6 |
+| Filtering and ordering tasks | 3 | 2 | 6 |
+| Inviting other users to tasks | 4 | 4 | 16 |
+| User account management (password reset, etc.) | 3 | 2 | 6 |
+| Task confirmation | 2 | 1 | 2 |
+| Basic task reporting | 2 | 2 | 4 |
+
+## User Stories
+Link to project board
+https://github.com/users/Oakani1/projects/3
+
+### Core Functionality
+
+* **Create Task:** As a signed-in user, I want to be able to create a task so that I can track my to-do items.
+* **View Tasks:** As a signed-in registered user, I want to be able to view all my tasks so that I can know what is coming up and keep myself organized.
+* **Edit Task:** As a registered user, I want to be able to edit a task so that I can update task details as needed.
+
+### User Management
+* **Sign In:** As a signed-up user, I want to be able to sign in to my account so that I can access my tasks and profile.
+* **User Name Preset:** As a user, I want my username pre-filled when creating a task or not need to fill it in at all.
+
+### Admin Features
+* **Admin Control:** As an admin, I want to be able to create a user so that I can control access.
+
+### Landing Page
+* **Landing Page:** As a guest, I want to be able to view the landing page and service details so that I can understand the value proposition and decide whether to sign up.
 
 
-User Stories
 
-Design
+## Design
 
+### Site Goals
+
+**Tasker** aims to simplify task management by providing a user-friendly platform to organize, prioritize, and track personal and professional commitments. The app seeks to enhance productivity and time management by offering a clear and intuitive interface for creating, managing, and completing tasks. 
+
+### Design Choices
+
+The **TasKer** interface prioritizes a clean and minimalist aesthetic with a focus on functionality. Key design elements include:
+
+* **Card-based layout:** Tasks are presented in easily digestible cards for quick scanning and understanding.
+* **Progess percentage:** Visual indicators of task completion offer clear progress visualization.
+* **Intuitive navigation:** A straightforward menu structure ensures effortless user interaction.
+* **Consistent color palette:** A minimalist but bright color scheme enhances visual appeal and improves usability.
+* **Clear call-to-actions:** Prominent buttons for adding new tasks and managing existing ones guide user actions. 
+
+### Colour Scheme & Font
+**Font used** Poppins
+
+#### Color Pallet
+<img src="images/readme/colours.png" alt="Colour pallet" width="500">
+
+
+### Wireframes
+The design for the MVP had to be changed to accomodate for time, but will be updated as soon as possible to match closer to the Wireframes
+#### mid-fidelity
+<img src="images/readme/landing_mid.png" alt="Mid-fidelity landing page">
+<img src="images/readme/sign_up_mid.png" alt="mid-fidelity sign up">
+<img src="images/readme/tasks_mid.png" alt="Mid-fidelity task list">
+
+#### High-fidelity
+<img src="images/readme/landing_hi.png" alt="Hi-fidelity landing page">
+<img src="images/readme/sign_up_hi.png" alt="Hi-fidelity sign up">
+<img src="images/readme/task_hi.png" alt="Hi-fidelity task list">
