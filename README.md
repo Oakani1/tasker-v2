@@ -325,6 +325,35 @@ No other known bugs
 
 **Overall, the testing process confirmed that the project meets the desired standards for functionality, accessibility, and performance.**
 
+## Deployment
+To deploy TasKer application to Heroku the following steps were taken:
+
+1. Create a New Repository:
+
+2. Set up the Development Environment:
+* Copy the repository URL into your development environment (e.g., Gitpod).
+* Install Django and ensure it’s listed in the requirements.txt file.
+
+3. Prepare for Deployment:
+* Create a Procfile in your project directory to specify the web server (e.g., gunicorn).
+* Ensure all necessary dependencies are included in the requirements.txt.
+
+4. Create a Heroku App:
+* Log in to Heroku and create a new application.
+* Name your application and select a region.
+
+5. Connect to GitHub:
+* In Heroku, connect your application to the relevant GitHub repository.
+
+6. Configure Environment Variables:
+* In the Heroku app settings, add any necessary environment variables, such as the database URL.
+
+7. Deploy the Applications:
+* Deploy the application by clicking on 'Deploy Branch' to manually deploy.
+
+8. Launch the Application:
+* After deployment launch the app directly from the Heroku dashboard.
+
 ### Credits
 
 This section details the resources and frameworks utilized in the development of this project.
