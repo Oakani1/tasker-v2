@@ -21,11 +21,12 @@ The project was created as part of my Capstone project with Code Institute
 3.	[Impact & Effort](#Impact_&_Effort)
 4.	[MOSCOW](#MOSCOW)
 5.	[User Stories](#User-Stories)
- * [Features](#Features)
-6.	[Design](#Design)
+	 * [Features](#Features)
+ 6.	[Design](#Design)
 7.	[Testing](#Testing-Summary)
 8.	[Known Bugs](#Known-Bugs)
-9.	[Credits](#Credits)
+9.	[Deployment](#Deployment) 
+10.	[Credits](#Credits)
 
 
 ## Priotisation
