@@ -17,16 +17,15 @@ The project was created as part of my Capstone project with Code Institute
 ## Contents
 
 1.	[Prioritization](#Priotisation)
-2.	User Story Map
-3.	Impact/Effort
-4.	MOSCOW
-5.	User Stories
- * Features
- * User stories
-6.	Design
-7.	Testing
-8.	Known Bugs
-9.	Credits
+2.	[User Story Map](#User-Story-Map)
+3.	[Impact/Effort](#Impact/Effort)
+4.	[MOSCOW](#MOSCOW)
+5.	[User Stories](#User-Stories)
+ * [Features](#Features)
+6.	[Design](#Design)
+7.	[Testing](#Testing)
+8.	[Known Bugs](#Known-Bugs)
+9.	[Credits](#Credits)
 
 
 ## Priotisation
