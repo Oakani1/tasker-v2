@@ -18,14 +18,15 @@ The project was created as part of my Capstone project with Code Institute
 
 1.	[Prioritization](#Priotisation)
 2.	[User Story Map](#User-Story-Map)
-3.	[Impact & Effort](#Impact_&_Effort)
-4.	[MOSCOW](#MOSCOW)
-5.	[User Stories](#User-Stories)
-6.	[Design](#Design)
-7.	[Testing](#Testing-Summary)
-8.	[Known Bugs](#Known-Bugs)
-9.	[Deployment](#Deployment) 
-10.	[Credits](#Credits)
+3.	[MVP features (NOW)](First_release_(NOW))
+4.	[Impact & Effort](#Impact_&_Effort)
+5.	[MOSCOW](#MOSCOW)
+6.	[User Stories](#User-Stories)
+7.	[Design](#Design)
+8.	[Testing](#Testing-Summary)
+9.	[Known Bugs](#Known-Bugs)
+10.	[Deployment](#Deployment) 
+11.	[Credits](#Credits)
 
 
 ## Priotisation
