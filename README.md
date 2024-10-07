@@ -16,7 +16,7 @@ The project was created as part of my Capstone project with Code Institute
 
 ## Contents
 
-1.	[Prioritization] (#Priotisation)
+1.	[Prioritization](#Priotisation)
 2.	User Story Map
 3.	Impact/Effort
 4.	MOSCOW
