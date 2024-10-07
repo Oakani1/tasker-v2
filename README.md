@@ -18,12 +18,12 @@ The project was created as part of my Capstone project with Code Institute
 
 1.	[Prioritization](#Priotisation)
 2.	[User Story Map](#User-Story-Map)
-3.	[Impact/Effort](#Impact/Effort)
+3.	[Impact & Effort](#Impact_&_Effort)
 4.	[MOSCOW](#MOSCOW)
 5.	[User Stories](#User-Stories)
  * [Features](#Features)
 6.	[Design](#Design)
-7.	[Testing](#Testing)
+7.	[Testing](#Testing-Summary)
 8.	[Known Bugs](#Known-Bugs)
 9.	[Credits](#Credits)
 
@@ -41,7 +41,7 @@ I outlined these potential features in a user story map. Then, used the Ipact Ef
 <img src="images/readme/user_story_map.png" alt="User story map and releases">
 
 
-### Impact/Effort
+### Impact & Effort
 <img src="images/readme/impact_effort_table_s.png" alt="Impact and effort table" width="700">
 
 
