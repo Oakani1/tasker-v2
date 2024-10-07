@@ -18,7 +18,7 @@ The project was created as part of my Capstone project with Code Institute
 
 1.	[Prioritization](#Priotisation)
 2.	[User Story Map](#User-Story-Map)
-3.	[MVP features (NOW)](#First_release (NOW))
+3.	[MVP features (NOW)](#First_release_(NOW))
 4.	[Impact & Effort](#Impact_&_Effort)
 5.	[MOSCOW](#MOSCOW)
 6.	[User Stories](#User-Stories)
