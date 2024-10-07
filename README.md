@@ -18,7 +18,7 @@ The project was created as part of my Capstone project with Code Institute
 
 1.	[Prioritization](#Priotisation)
 2.	[User Story Map](#User-Story-Map)
-3.	[MVP features (NOW)](#First_release_(NOW))
+3.	[MVP features (NOW)](#MVP_Features)
 4.	[Impact & Effort](#Impact_&_Effort)
 5.	[MOSCOW](#MOSCOW)
 6.	[User Stories](#User-Stories)
@@ -49,7 +49,7 @@ I outlined these potential features in a user story map. Then, used the Ipact Ef
 ### MOSCOW
 The MOSCOW framework helped me categorize further by grouping features into Now, Next, and Later, allowing me to focus on what needs to be built for the initial release. NEXT and LATER stage inititives may change based on user feedback.
 
-### First_release (NOW)
+### MVP Features
 The first release primarily consists of must-have and should-have features. The core focus is on building a foundational task management system with essential user authentication. Additional functionalities can be explored in subsequent releases based on user feedback and project priorities.
 
 ### Landing Page
